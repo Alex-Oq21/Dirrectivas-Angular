@@ -1,5 +1,12 @@
 <h1>Noticias</h1>
 <div class="row">
     <div class="col-10"></div>
-    <div class="col-2"></div>
+    <div class="col-2">
+        <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <select class="form-control" id="selectorNoticias" (change)="eventoControl($event)">
+             <option *ngFor="let objeto of categorias" value="{{objeto.codigo}}">{{objeto.texto}}</option> 
+            </select>
+        </div>
+    </div>
 </div>
